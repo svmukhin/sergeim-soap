@@ -1,4 +1,6 @@
-using System.Threading.Tasks;
+// SPDX-FileCopyrightText: Copyright (c) 2026 Sergei Mukhin
+// SPDX-License-Identifier: MIT
+
 using SergeiM.Http;
 using SergeiM.Http.Request;
 using SergeiM.Http.Wire;

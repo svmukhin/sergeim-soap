@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: Copyright (c) 2026 Sergei Mukhin
+// SPDX-License-Identifier: MIT
+
 namespace SergeiM.Soap;
 
 /// <summary>Identifies the SOAP protocol version used by a request or response.</summary>

@@ -1,5 +1,7 @@
+// SPDX-FileCopyrightText: Copyright (c) 2026 Sergei Mukhin
+// SPDX-License-Identifier: MIT
+
 using System.Net;
-using System.Net.Http;
 using System.Text;
 
 namespace SergeiM.Soap.Tests;

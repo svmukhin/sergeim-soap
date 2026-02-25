@@ -1,4 +1,6 @@
-using System.Net.Http;
+// SPDX-FileCopyrightText: Copyright (c) 2026 Sergei Mukhin
+// SPDX-License-Identifier: MIT
+
 using SergeiM.Http.Response;
 
 namespace SergeiM.Soap;

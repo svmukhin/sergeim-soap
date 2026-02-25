@@ -1,6 +1,6 @@
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Threading.Tasks;
+// SPDX-FileCopyrightText: Copyright (c) 2026 Sergei Mukhin
+// SPDX-License-Identifier: MIT
+
 using SergeiM.Http;
 
 namespace SergeiM.Soap.Tests;
