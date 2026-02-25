@@ -190,7 +190,13 @@ public sealed class Envelope
     {
         var nav = ResolvedDocument.CreateNavigator()!;
         var ns = additionalNs is null ? NsManager : BuildCombinedNsManager(additionalNs);
-        return nav.Evaluate(xpath, ns)?.ToString() ?? string.Empty;
+        var result = nav.Evaluate(xpath, ns);
+        if (result is XPathNodeIterator it)
+        {
+            it.MoveNext();
+            return it.Current?.Value ?? string.Empty;
+        }
+        return result?.ToString() ?? string.Empty;
     }
 
     private XmlNamespaceManager BuildCombinedNsManager(XmlNamespaceManager additionalNs)
