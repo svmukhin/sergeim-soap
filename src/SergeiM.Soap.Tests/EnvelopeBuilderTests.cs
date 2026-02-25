@@ -5,6 +5,13 @@ namespace SergeiM.Soap.Tests;
 [TestClass]
 public sealed class EnvelopeBuilderTests
 {
+    private const string Soap11Response = """
+        <?xml version="1.0" encoding="utf-8"?>
+        <env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+          <env:Body><ping/></env:Body>
+        </env:Envelope>
+        """;
+
     [TestMethod]
     public void Build_NoHeader_OmitsHeaderElement()
     {
@@ -96,6 +103,36 @@ public sealed class EnvelopeBuilderTests
     public void Back_StandaloneBuilder_Throws()
     {
         Assert.ThrowsException<InvalidOperationException>(() => new EnvelopeBuilder().Back());
+    }
+
+    [TestMethod]
+    public void Back_WiredToSoapRequest_ReturnsSoapRequest()
+    {
+        var wire = new MockWire(200, Soap11Response);
+        var result = new SoapRequest("https://example.com", wire)
+            .Envelope()
+            .WithBody("<ping/>")
+            .Back();
+        Assert.IsInstanceOfType<SoapRequest>(result);
+    }
+
+    [TestMethod]
+    public void Back_WiredToSoapRequest_SetsCorrectBody()
+    {
+        var wire = new MockWire(200, Soap11Response);
+        var builder = new SoapRequest("https://example.com", wire).Envelope().WithBody("<ping/>");
+        var expected = builder.Build();
+        builder.Back().Fetch();
+        Assert.AreEqual(expected, wire.LastBody);
+    }
+
+    [TestMethod]
+    public void Back_WiredToSoapRequest_SetsContentType()
+    {
+        var wire = new MockWire(200, Soap11Response);
+        var builder = new SoapRequest("https://example.com", wire).Envelope().WithBody("<ping/>");
+        builder.Back().Fetch();
+        Assert.AreEqual(builder.ContentType, wire.LastHeaders?.GetValueOrDefault("Content-Type"));
     }
 
     [TestMethod]
