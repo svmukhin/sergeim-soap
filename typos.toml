@@ -1,0 +1,6 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Sergei Mukhin
+# SPDX-License-Identifier: MIT
+
+[default.extend-words]
+DNE = "DNE"
+Dne = "Dne"
