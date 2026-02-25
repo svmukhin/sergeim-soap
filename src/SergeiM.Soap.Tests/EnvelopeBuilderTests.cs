@@ -76,13 +76,13 @@ public sealed class EnvelopeBuilderTests
     [TestMethod]
     public void ContentType_Soap11()
     {
-        Assert.AreEqual("text/xml; charset=utf-8", new EnvelopeBuilder(SoapVersion.Soap11).ContentType);
+        Assert.AreEqual(SoapMediaType.Soap11, new EnvelopeBuilder(SoapVersion.Soap11).ContentType);
     }
 
     [TestMethod]
     public void ContentType_Soap12()
     {
-        Assert.AreEqual("application/soap+xml; charset=utf-8", new EnvelopeBuilder(SoapVersion.Soap12).ContentType);
+        Assert.AreEqual(SoapMediaType.Soap12, new EnvelopeBuilder(SoapVersion.Soap12).ContentType);
     }
 
     [TestMethod]
