@@ -1,6 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <!-- Package Metadata -->
+        <PackageId>SergeiM.Soap</PackageId>
+        <Title>SergeiM.Soap</Title>
+        <Description>Immutable fluent SOAP 1.1 and SOAP 1.2 client for .NET 8, built on SergeiM.Http. Send SOAP requests, parse envelopes and faults, and assert responses with a chainable API.</Description>
+        <Authors>Sergei Mukhin</Authors>
+        <Company>Sergei Mukhin</Company>
+        <Copyright>Copyright © 2026 Sergei Mukhin</Copyright>
+        <!-- Package Details -->
+        <PackageTags>soap;soap-client;soap11;soap12;xml;web-services;http;fluent;fluent-api;dotnet</PackageTags>
+        <PackageProjectUrl>https://github.com/svmukhin/sergeim-soap</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/svmukhin/sergeim-soap</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <!-- Release Notes -->
+        <PackageReleaseNotes>See release notes at: https://github.com/svmukhin/sergeim-soap/releases/tag/$(VersionPrefix)</PackageReleaseNotes>
+        <!-- Source Link -->
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <!-- Documentation -->
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
     <ItemGroup>
+        <None Include="..\..\README.md"
+              Pack="true"
+              PackagePath="\" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub"
+                          PrivateAssets="All" />
         <PackageReference Include="SergeiM.Http" />
     </ItemGroup>
 </Project>
