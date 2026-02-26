@@ -76,7 +76,7 @@ public sealed class SoapRequest
     public EnvelopeBuilder Envelope() => new(this, _version);
 
     /// <summary>
-    /// Applies a built envelope XML and Content-Type to a new <see cref="SoapRequest"/> via <see cref="IRequest.Body"/>.
+    /// Applies a built envelope XML and Content-Type to a new <see cref="SoapRequest"/> via <see cref="IRequest.Body(string, string)"/>.
     /// For SOAP 1.2, appends the stored <c>action</c> parameter to the Content-Type before delegating.
     /// Called internally by <see cref="EnvelopeBuilder.Back"/>.
     /// </summary>
