@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/svmukhin/sergeim-soap/compare/v0.1.1...v0.1.2) (2026-06-24)
+
+
+### Miscellaneous
+
+* **#6:** fix version prefix in ReleasePackageNotes link ([4e3c4a5](https://github.com/svmukhin/sergeim-soap/commit/4e3c4a592d11b2887785484b0752d535fb97fafc))
+
 ## [0.1.1](https://github.com/svmukhin/sergeim-soap/compare/0.1.0...v0.1.1) (2026-06-24)
 
 
