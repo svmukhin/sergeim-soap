@@ -7,8 +7,8 @@
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     </PropertyGroup>
     <PropertyGroup>
-        <VersionPrefix>0.1.0</VersionPrefix>
-        <VersionSuffix />
+        <VersionPrefix>0.1.1</VersionPrefix>
+        <VersionSuffix/>
     </PropertyGroup>
     <PropertyGroup>
         <SolutionDir Condition="'$(SolutionDir)'==''">$(MSBuildThisFileDirectory)</SolutionDir>
