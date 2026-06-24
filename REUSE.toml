@@ -10,6 +10,8 @@ SPDX-PackageDownloadLocation = "https://github.com/svmukhin/edible-css"
 path = [
   ".gitignore",
   ".markdownlint-cli2.yaml",
+  "release-please-config.json",
+  ".release-please-manifest.json",
   "**.md",
   "**/*.props",
   "**/*.csproj",
